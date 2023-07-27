@@ -2,20 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
     
     <title>Копировать сайт</title>
 </head>
 <body>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large"> &times;</button>
+    <form action="/action_page.php">
+      <button type="submit"><img src="img/search.svg" alt=""></button>
+      <input type="text" placeholder="ПОИСК ПО САЙТУ" name="search">
+      
+    </form>
+    <a href="#" class="w3-bar-item w3-button">ГЛАВНАЯ &nbsp;&nbsp;&nbsp;<img src="img/OK.svg" alt=""></a>
+    <a href="#" class="w3-bar-item w3-button">НАШИ УСЛУГИ &nbsp;&nbsp;&nbsp;<img src="img/OK.svg" alt=""></a>
+    <a href="#" class="w3-bar-item w3-button">ВОПРОС-ОТВЕТ &nbsp;&nbsp;&nbsp;<img src="img/OK.svg" alt=""></a>
+    <a href="#" class="w3-bar-item w3-button">РЕЗУЛЬТАТЫ &nbsp;&nbsp;&nbsp;<img src="img/OK.svg" alt=""></a>
+    <a href="#" class="w3-bar-item w3-button">КОНТАКТЫ &nbsp;&nbsp;&nbsp;<img src="img/OK.svg" alt=""></a>
+  </div>
+  
     <div class="menu">
-        <img src="img/logo.svg"  alt="" class="logo">
-        <div class="menutext">
+
+    <div class="menutext w3-teal">
+    <img src="img/logo.svg"  alt="" class="logo">
     <a href="">Пересадка волос</a>
     <a href="">Пересадка бороды</a>
     <a href="">Лечение волос</a>
     <a href="">РЕЗУЛЬТАТЫ</a>
-    <img src="img/1.svg" alt="" class="">
+    <a onclick="openRightMenu()"><i class="fa fa-bars"></i></a>
     </div>
    </div>
    <div class="slide">
@@ -30,7 +47,7 @@
         <p>Сегодня клиника «5 Alfa», всего за один день вернет 
             вам ваши волосы и навсегда избавит от проблемы 
             выпадения волос и облысения.</p>
-        <a href="#11" class="slider-btn">Хочу вернуть свои волосы</a>
+        
         <div class="wp-content">
             <a href=""><img src="img/wp.svg" alt=""></a>
             </div>  
@@ -376,7 +393,23 @@
   <h1>ABC DESIGN</h1></div>
 </footer>
 
-
+<script>
+  function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+  }
+  
+  function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+  }
+  
+  function openRightMenu() {
+    document.getElementById("rightMenu").style.display = "block";
+  }
+  
+  function closeRightMenu() {
+    document.getElementById("rightMenu").style.display = "none";
+  }
+  </script>
 <script>
   function myFunction() {
     alert("Запис отправлен!");
